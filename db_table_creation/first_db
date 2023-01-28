@@ -5,3 +5,11 @@ CREATE DATABASE exercise_db
 CREATE TABLE products (id serial, name varchar(255), description text, price decimal(7, 2), PRIMARY KEY(id));
 CREATE TABLE orders (id serial, description text, PRIMARY KEY(id));
 CREATE TABLE clients (id serial, name varchar(100), surname varchar(200), PRIMARY KEY(id));
+
+INSERT INTO products(name, description, price) VALUES ('milk', 'taken from cows, poor cows', 5.90);
+INSERT INTO orders(description) VALUES ('first order ever');
+INSERT INTO clients(name, surname) VALUES('Szymon', 'Ptasznik');
+
+SELECT * FROM products;
+SELECT * FROM clients;
+SELECT * FROM orders;
