@@ -1,0 +1,4 @@
+CREATE DATABASE exercise_db
+
+CREATE TABLE products (id serial, name varchar(300), description varchar(1000), price decimal(7, 2), PRIMARY KEY(id));
+
