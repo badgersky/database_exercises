@@ -1,0 +1,7 @@
+CREATE DATABASE exercise_db
+
+\c exercise_db
+
+CREATE TABLE products (id serial, name varchar(255), description text, price decimal(7, 2), PRIMARY KEY(id));
+CREATE TABLE orders (id serial, description text, PRIMARY KEY(id));
+CREATE TABLE clients (id serial, name varchar(100), surname varchar(200), PRIMARY KEY(id));
