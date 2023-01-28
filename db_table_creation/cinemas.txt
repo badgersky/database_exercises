@@ -6,3 +6,25 @@ CREATE TABLE cinemas (id serial, name varchar(255), adress varchar(255), PRIMARY
 CREATE TABLE movies (id serial, name varchar(255), description text, rating smallint, PRIMARY KEY(id));
 CREATE TABLE tickets (id serial, quantity int, price decimal(4, 2), PRIMARY KEY(id));
 CREATE TABLE payments (id serial, type varchar(255), date date, PRIMARY KEY(id));
+
+INSERT INTO movies VALUES(1, 'avatar', 'blue aliens, pretty movie', 8);
+INSERT INTO movies VALUES(2, 'walle', 'robots have feelings', 10);
+INSERT INTO movies VALUES(3, 'kiler', 'very funny', 10);
+INSERT INTO movies VALUES(4, 'zoolander', 'very funny, meme templates', 8);
+
+INSERT INTO tickets VALUES(1, 1, 20.20);
+INSERT INTO tickets VALUES(2, 1, 14.20);
+INSERT INTO tickets VALUES(3, 1, 30.89);
+INSERT INTO tickets VALUES(4, 1, 15.31);
+
+SELECT * FROM tickets WHERE price > 15.30;
+SELECT * FROM movies WHERE name LIKE 'W%';
+SELECT * FROM tickets WHERE quantity > 3;
+
+INSERT INTO cinemas VALUES(1, 'cinema city bonarka', 'bonarka');
+INSERT INTO cinemas VALUES(2, 'cinema city kazimierz', 'galeria kazimierz');
+INSERT INTO cinemas VALUES(3, 'multikino', 'serenada');
+
+INSERT INTO payments VALUES(1, 'gotówka', '2023-01-12');
+INSERT INTO payments VALUES(2, 'karta', '2023-01-01');
+INSERT INTO payments VALUES(3, 'blik', '2022-12-30');
