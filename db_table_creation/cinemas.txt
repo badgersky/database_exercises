@@ -34,3 +34,5 @@ DELETE FROM tickets WHERE price > 20;
 INSERT INTO tickets VALUES(3, 1, 14.30);
 DELETE FROM tickets WHERE id=3;
 DELETE FROM cinemas WHERE id=2;
+
+ALTER TABLE cinemas ADD seats smallint;

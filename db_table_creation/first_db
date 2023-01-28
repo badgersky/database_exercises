@@ -13,3 +13,6 @@ INSERT INTO clients(name, surname) VALUES('Szymon', 'Ptasznik');
 SELECT * FROM products;
 SELECT * FROM clients;
 SELECT * FROM orders;
+
+ALTER TABLE products ADD rating decimal(4, 2);
+
