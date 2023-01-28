@@ -1,0 +1,8 @@
+CREATE DATABASE cinemas_db;
+
+\c cinemas_db
+
+CREATE TABLE cinemas (id serial, name varchar(255), adress varchar(255), PRIMARY KEY(id));
+CREATE TABLE movies (id serial, name varchar(255), description text, rating smallint, PRIMARY KEY(id));
+CREATE TABLE tickets (id serial, quantity int, price decimal(4, 2), PRIMARY KEY(id));
+CREATE TABLE payments (id serial, type varchar(255), date date, PRIMARY KEY(id));
