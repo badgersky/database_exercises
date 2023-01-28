@@ -28,3 +28,9 @@ INSERT INTO cinemas VALUES(3, 'multikino', 'serenada');
 INSERT INTO payments VALUES(1, 'gotówka', '2023-01-12');
 INSERT INTO payments VALUES(2, 'karta', '2023-01-01');
 INSERT INTO payments VALUES(3, 'blik', '2022-12-30');
+
+DELETE FROM movies WHERE id=1;
+DELETE FROM tickets WHERE price > 20;
+INSERT INTO tickets VALUES(3, 1, 14.30);
+DELETE FROM tickets WHERE id=3;
+DELETE FROM cinemas WHERE id=2;
