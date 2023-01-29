@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask
 from psycopg2 import connect, OperationalError
 
 
