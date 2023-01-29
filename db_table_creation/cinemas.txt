@@ -36,3 +36,11 @@ DELETE FROM tickets WHERE id=3;
 DELETE FROM cinemas WHERE id=2;
 
 ALTER TABLE cinemas ADD seats smallint;
+
+CREATE TABLE comments (comment_id serial NOT NULL, movie_id serial NOT NULL content text, PRIMARY KEY(comment_id), FOREIGN KEY(movie_id) REFERENCES movies(id));
+INSERT INTO comments VALUES(1, 2, 'very cute'), (2, 2, 'walle is cool'), (3, 3, 'very funny'), (4, 3, 'the best pl movie');
+
+SELECT * FROM movies JOIN comments ON movies.id=comments.movie_id;
+SELECT * FROM movies LEFT JOIN comments ON movies.id=comments.movie_id;
+
+INSERT INTO comments VALUES(5, 4, 'funny movie');
