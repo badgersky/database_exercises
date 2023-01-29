@@ -52,3 +52,12 @@ INSERT INTO payments VALUES(4, 'gotówka', '2023-01-12');
 INSERT INTO payments VALUES(2, 'karta', '2023-01-01');
 INSERT INTO tickets VALUES(1, 3, 20.10);
 INSERT INTO payments VALUES(1, 'blik', '2023-01-31');
+
+CREATE TABLE screening (id serial NOT NULL, cinema_id int NOT NULL, movie_id int NOT NULL, datetime TIMESTAMP, PRIMARY KEY(id), FOREIGN KEY(cinema_id) REFERENCES cinemas(id), FOREIGN KEY(movie_id) REFERENCES movies(id));
+
+INSERT INTO screening VALUES(1, 1, 4, '2023-01-30 16:20:00');
+INSERT INTO screening VALUES(2, 1, 4, '2023-01-30 12:00:00');
+INSERT INTO screening VALUES(3, 3, 4, '2023-01-30 16:20:00');
+INSERT INTO screening VALUES(4, 3, 2, '2023-01-30 10:20:00');
+
+SELECT * FROM cinemas JOIN screening ON cinemas.id=screening.cinema_id JOIN movies ON screening.movie_id=movies.id;

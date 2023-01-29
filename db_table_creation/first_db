@@ -28,3 +28,9 @@ CREATE TABLE clientadress (client_id int NOT NULL, city varchar(100), street var
 INSERT INTO clients VALUES (2, 'Pat', 'Nalesnik');
 INSERT INTO clients VALUES (3, 'Hubert', 'Hytros');
 
+CREATE TABLE product_orders (id serial NOT NULL, product_id int NOT NULL, order_id int NOT NULL, PRIMARY KEY(id), FOREIGN KEY(product_id) REFERENCES products(id), FOREIGN KEY(order_id) REFERENCES orders(id));
+
+INSERT INTO product_orders VALUES(1, 1, 1);
+INSERT INTO product_orders VALUES(2, 2, 1);
+
+SELECT * FROM orders JOIN product_orders ON orders.id=product_orders.order_id JOIN products ON orders.id=product_orders.product_id;
