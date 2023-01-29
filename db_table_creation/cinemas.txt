@@ -44,3 +44,11 @@ SELECT * FROM movies JOIN comments ON movies.id=comments.movie_id;
 SELECT * FROM movies LEFT JOIN comments ON movies.id=comments.movie_id;
 
 INSERT INTO comments VALUES(5, 4, 'funny movie');
+
+DROP TABLE payments;
+CRETE TABLE payments (ticket_id int NOT NULL, type VARCHAR(255), date DATE, PRIMARY KEY(ticket_id), FOREIGN KEY(ticket_it) REFERENCES tickets(id));
+
+INSERT INTO payments VALUES(4, 'gotówka', '2023-01-12');
+INSERT INTO payments VALUES(2, 'karta', '2023-01-01');
+INSERT INTO tickets VALUES(1, 3, 20.10);
+INSERT INTO payments VALUES(1, 'blik', '2023-01-31');

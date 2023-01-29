@@ -23,3 +23,8 @@ INSERT INTO products VALUES(3, 'i7', '13th generation', 2000, 10);
 CREATE TABLE opinions(opinion_id serial NOT NULL, product_id serial NOT NULL description text, PRIMARY KEY(opinion_id), FOREIGN KEY(product_id), REFERENCES products(id));
 
 SELECT * FROM products JOIN opinions ON products.id=opinions.product_id;
+
+CREATE TABLE clientadress (client_id int NOT NULL, city varchar(100), street varchar(255), house_nr int, PRIMARY KEY(client_id), FOREIGN KEY(client_id) REFERENCES clients(id));
+INSERT INTO clients VALUES (2, 'Pat', 'Nalesnik');
+INSERT INTO clients VALUES (3, 'Hubert', 'Hytros');
+
