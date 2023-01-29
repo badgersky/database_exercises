@@ -16,3 +16,10 @@ SELECT * FROM orders;
 
 ALTER TABLE products ADD rating decimal(4, 2);
 
+INSERT INTO products VALUES(1, 'i5', '13th generation', 1000, 8);
+INSERT INTO products VALUES(2, 'i9', '13th generation', 3000, 10);
+INSERT INTO products VALUES(3, 'i7', '13th generation', 2000, 10);
+
+CREATE TABLE opinions(opinion_id serial NOT NULL, product_id serial NOT NULL description text, PRIMARY KEY(opinion_id), FOREIGN KEY(product_id), REFERENCES products(id));
+
+SELECT * FROM products JOIN opinions ON products.id=opinions.product_id;
