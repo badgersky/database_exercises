@@ -7,7 +7,7 @@ USER = 'postgres'
 PASSWORD = 'coderslab'
 
 
-def select_sql(db, sql_task):
+def execute_sql(db, sql_task):
 
     try:
         cnx = connect(user=USER, host=HOST, password=PASSWORD, database=db)
@@ -31,7 +31,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def run_app():
-    result = select_sql('exercises_db', 'SELECT * FROM products;')
+    result = execute_sql('exercises_db', 'SELECT * FROM products;')
     output = '<table>'
     for res in result:
         row = '<tr>'
