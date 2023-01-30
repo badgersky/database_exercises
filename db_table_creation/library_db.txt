@@ -16,3 +16,14 @@ INSERT INTO book VALUES(1, '9128371238', 'Krzyżacy', 'o bitwie pod grunwaldem',
 (5, '988289382', 'Dziady', 'wtf', False),
 (6, '125654514', 'Potop', 'Swedens attack', False);
 INSERT INTO client VALUES(1, 'Jan', 'Kowalski'), (2, 'Bartek', 'Nowak'), (3, 'Pat', 'Nalesnik');
+
+SELECT * FROM author;
+SELECT * FROM author WHERE id=2;
+
+SELECT * FROM book;
+SELECT * FROM book WHERE id=2;
+
+SELECT * FROM client;
+SELECT * FROM client WHERE id=1;
+
+DELETE from book WHERE id=5;
