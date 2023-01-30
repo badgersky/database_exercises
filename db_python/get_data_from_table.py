@@ -8,7 +8,6 @@ PASSWORD = 'coderslab'
 
 
 def execute_sql(db, sql_task):
-
     try:
         cnx = connect(user=USER, host=HOST, password=PASSWORD, database=db)
         cnx.autocommit = True
@@ -43,3 +42,4 @@ def run_app():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
