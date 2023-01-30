@@ -1,0 +1,18 @@
+CREATE DATABASE library_db;
+
+CREATE TABLE author (id serial NOT NULL, name varchar(255), PRIMARY KEY (id));
+
+CREATE TABLE book (id serial NOT NULL, isbn varchar(13), name varchar(255), description text, is_loaned BOOLEAN DEFAULT 'False', PRIMARY KEY(id));
+
+CREATE TABLE client (id serial NOT NULL, first_name varchar(255), last_name varchar(255), PRIMARY KEY(id));
+
+CREATE TABLE category (id serial NOT NULL, name varchar(255), PRIMARY KEY(id));
+
+INSERT INTO author VALUES(1, 'Adam Mickiewicz'), (2, 'Henryk Sienkiewicz'), (3, 'J.K Rowling'), (4, 'J.R.R Tolkien');
+INSERT INTO book VALUES(1, '9128371238', 'Krzyżacy', 'o bitwie pod grunwaldem', False),
+(2, '123263455', 'Harry Potter', 'wizards', True),
+(3, '845723823', 'Lord of the Rings', 'rpg', True),
+(4, '452341412', 'Hobbit', 'prequel rpg', False),
+(5, '988289382', 'Dziady', 'wtf', False),
+(6, '125654514', 'Potop', 'Swedens attack', False);
+INSERT INTO client VALUES(1, 'Jan', 'Kowalski'), (2, 'Bartek', 'Nowak'), (3, 'Pat', 'Nalesnik');
